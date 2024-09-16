@@ -19,7 +19,19 @@ public class Vendedor {
         ventas.add(venta);
     }
 
-
+    public double calcularComision() {
+        double totalVentas = 0;
+        //calculamos el total de ventas
+        for (Venta venta : ventas) {
+            totalVentas = +venta.getProducto().getPrecio();
+        }
+        //verificamos que se hicieron mas de 2 ventas
+        if(ventas.size() <=2){
+            return totalVentas = totalVentas * 0.05;
+        }else{
+            return totalVentas = totalVentas * 0.10;
+        }
+    }
 
 
     public String getCodigo() {
