@@ -14,6 +14,12 @@ public class Vendedor {
         this.ventas = new ArrayList<>();
     }
 
+    //metodos propios del vendedor
+    public void agregarVenta(Venta venta){
+        ventas.add(venta);
+    }
+
+
 
 
     public String getCodigo() {
