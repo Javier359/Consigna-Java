@@ -26,7 +26,12 @@ public class Main {
                         case 2:
                             agregarVendedor(tienda, sc);
                             break;
+                    case 3:
+                        registrarVenta(tienda, sc);
+                        break;
 
+                    case 4:
+                        //buscarProductosPorCategoria
                 }
 
 
@@ -46,8 +51,10 @@ public class Main {
         String nombreProducto = scanner.nextLine();
         System.out.println("Ingrese la categoria del producto: ");
         String categoria = scanner.nextLine();
+        System.out.println("Ingrese el precio del producto: ");
+        double precio = scanner.nextDouble();
 
-        Producto producto = new Producto(codigoProducto, nombreProducto, categoria);
+        Producto producto = new Producto(codigoProducto, nombreProducto, categoria, precio);
         tienda.agregarProducto(producto);
         System.out.println("Producto agregado con exito");
     }
@@ -63,6 +70,20 @@ public class Main {
         Vendedor vendedor = new Vendedor(codigoVendedor,nombreVendedor,sueldoVendedor);
         tienda.agregarVendedor(vendedor);
         System.out.println("Vendedor agregado con exito");
+    }
+
+    public static void registrarVenta(Tienda tienda, Scanner scanner){
+        try{
+            System.out.println("Porfavor ingresar el codigo del producto: ");
+            String codigoProducto = scanner.nextLine();
+            System.out.println("Porfavor ingresar el codigo del vendedor: ");
+            String codigoVendedor = scanner.nextLine();
+
+            tienda.registrarVenta(codigoProducto,codigoVendedor);
+            System.out.println("Venta registrada con exito");
+        }catch (Exception e){
+            System.out.println("ocurrio un error ianesperado " + e.getMessage());
+        }
     }
 
 }

@@ -4,10 +4,8 @@ public class Producto {
     private double precio;
     private String categoria;
 
-    public Producto(String codigoProducto, String nombreProducto, String categoria) {
-    }
 
-    public Producto(String categoria, String codigo, String nombre, double precio) {
+    public Producto(String codigo, String nombre, String categoria, double precio) {
         this.categoria = categoria;
         this.codigo = codigo;
         this.nombre = nombre;

@@ -37,7 +37,7 @@ public class Tienda {
             }
         }
         if(producto == null || vendedor == null){
-            throw new Exception("No existe un producto o vendedor dicho codigo");
+            throw new Exception("No existe un producto o vendedor con dicho codigo");
         }
         Venta venta = new Venta(producto, vendedor);
         vendedor.agregarVenta(venta);
