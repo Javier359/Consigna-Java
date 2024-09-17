@@ -63,4 +63,28 @@ public class Tienda {
         }
         return productosEncontrados;
     }
+
+    //buscamos al vendedor
+    public Vendedor buscarVendedor(String codigo) {
+        for (Vendedor vendedor : vendedores) {
+            if (vendedor.getCodigo() != null && vendedor.getCodigo().equals(codigo)) {
+                return vendedor;
+            }
+        }
+        return null;
+    }
+
+    public void mostrarComisionVendedor(String codigoVendedor) {
+        Vendedor vendedor = buscarVendedor(codigoVendedor);
+
+        if (vendedor == null) {
+            System.out.println("Vendedor no encontrado.");
+            return;
+        }
+
+        // Mostrar ventas y comisión
+        vendedor.mostrarVentas();
+        double comision = vendedor.calcularComision();
+        System.out.println("Comisión ganada por el vendedor: " + comision);
+    }
 }

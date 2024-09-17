@@ -32,6 +32,13 @@ public class Vendedor {
             return totalVentas = totalVentas * 0.10;
         }
     }
+    public void mostrarVentas() {
+        System.out.println("Ventas del vendedor " + nombre + " (Código: " + codigo + "):");
+        for (Venta venta : ventas) {
+            Producto producto = venta.getProducto();
+            System.out.println("Código del producto: " + producto.getCodigo() + ", Nombre: " + producto.getNombre() + ", Categoría: " + producto.getCategoria() + ", Precio: " + producto.getPrecio());
+        }
+    }
 
 
     public String getCodigo() {
