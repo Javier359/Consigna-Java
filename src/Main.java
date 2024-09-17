@@ -57,7 +57,7 @@ public class Main {
     }
 
     //funciones a usar
-    public static void agregarProducto(Tienda tienda, Scanner scanner) {
+    private static void agregarProducto(Tienda tienda, Scanner scanner) {
         System.out.println("Ingrese el codigo del producto: ");
         String codigoProducto = scanner.nextLine();
         System.out.println("Ingrese el nombre del producto: ");
@@ -72,7 +72,7 @@ public class Main {
         System.out.println("Producto agregado con exito");
     }
 
-    public static void agregarVendedor(Tienda tienda, Scanner scanner) {
+    private static void agregarVendedor(Tienda tienda, Scanner scanner) {
         System.out.println("Ingrese el codigo del vendedor: ");
         String codigoVendedor = scanner.nextLine();
         System.out.println("Ingrese el nombre del vendedor: ");
@@ -85,7 +85,7 @@ public class Main {
         System.out.println("Vendedor agregado con exito");
     }
 
-    public static void registrarVenta(Tienda tienda, Scanner scanner) {
+    private static void registrarVenta(Tienda tienda, Scanner scanner) {
         try {
             System.out.println("Porfavor ingresar el codigo del producto: ");
             String codigoProducto = scanner.nextLine();
@@ -99,7 +99,7 @@ public class Main {
         }
     }
 
-    public static void buscarProductosCategoria(Tienda tienda, Scanner scanner) {
+    private static void buscarProductosCategoria(Tienda tienda, Scanner scanner) {
         System.out.print("Ingrese la categoría del producto: ");
         String categoria = scanner.nextLine();
 
