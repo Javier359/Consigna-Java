@@ -42,4 +42,25 @@ public class Tienda {
         Venta venta = new Venta(producto, vendedor);
         vendedor.agregarVenta(venta);
     }
+
+    //filtrar por categoria
+    public List<Producto> buscarProductosCategoria(String categoria) {
+        List<Producto> productosEncontrados = new ArrayList<>();
+        for(Producto producto : productos) {
+            if(producto.getCategoria() != null && producto.getCategoria().equalsIgnoreCase(categoria)){
+                productosEncontrados.add(producto);
+            }
+        }
+        return productosEncontrados;
+    }
+    //filtrar por nombre
+    public List<Producto> buscarProductosNombre(String nombreProducto){
+        List<Producto> productosEncontrados = new ArrayList<>();
+        for(Producto producto : productos){
+            if(producto.getNombre() !=null && producto.getNombre().equalsIgnoreCase(nombreProducto)){
+                productosEncontrados.add(producto);
+            }
+        }
+        return productosEncontrados;
+    }
 }
